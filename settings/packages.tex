@@ -1,0 +1,67 @@
+\PassOptionsToPackage{table,svgnames,dvipsnames}{xcolor}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[sc]{mathpazo}
+\usepackage[american]{babel}
+\usepackage[autostyle]{csquotes}
+\usepackage[%
+  backend=biber,
+  bibwarn,
+  url=false,
+  style=numeric,
+  maxnames=4,
+  minnames=3,
+  maxbibnames=99,
+  firstinits,
+  uniquename=init,
+  abbreviate=false,
+  doi=false,
+  isbn=false]{biblatex}
+\usepackage{listings}
+\usepackage{lstautogobble}
+\usepackage{booktabs}
+\usepackage[final]{microtype}
+\usepackage[toc,nonumberlist,acronym]{glossaries}
+\renewcommand*{\glspostdescription}{} %Den Punkt am Ende jeder Beschreibung deaktivieren
+
+\usepackage{amsmath,amssymb,marvosym} % Math
+
+\usepackage{lipsum} % Lorem ipsum. You can safely remove this when you entered your content!
+
+%\usepackage{fancyhdr}
+
+%\usepackage{xspace} % Für manuelle Abstände
+
+% PDF
+\usepackage[pdfauthor={YOUR NAME},
+	pdftitle={YOUR TITLE},
+	baseurl={http://campar.in.tum.de},
+	breaklinks,hidelinks]{hyperref}
+
+\usepackage{url}
+%\usepackage{pdflscape} % einzelne Seiten drehen können
+
+% Tabellen
+%\usepackage{multirow} % Tabellen-Zellen über mehrere Zeilen
+%\usepackage{multicol} % mehre Spalten auf eine Seite
+%\usepackage{tabularx} % Für Tabellen mit vorgegeben Größen
+%\usepackage{longtable} % Tabellen über mehrere Seiten
+%\usepackage{array}
+%\usepackage{float}
+%\usepackage{rotating} % Tabellen im Querformat
+
+% Bilder
+\usepackage{graphicx} % Bilder
+\usepackage{color} % Farben
+%\usepackage{floatflt} % Textumfluss
+\usepackage{caption} % Verbesserte Untertitel
+\usepackage{subfigure} % mehrere Abbildungen nebeneinander/übereinander
+%\newcommand{\subfigureautorefname}{\figurename} % um \autoref auch für subfigures benutzen
+\usepackage[all]{hypcap} % Beim Klicken auf Links zum Bild und nicht zu Caption gehen
+%\usepackage[section]{placeins} % Bilder nur in zugehöriger Section unterbringen
+
+\usepackage{scrhack} % necessary for listings package
+
+\usepackage[nohints]{minitoc} % Table of content at each chapter
+\usepackage{ifthen}

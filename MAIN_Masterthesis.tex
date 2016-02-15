@@ -1,0 +1,76 @@
+% #################
+% ### PREAMBLE  ###
+% #################
+
+\RequirePackage[l2tabu,orthodox]{nag}
+
+\documentclass[headsepline,footsepline,footinclude=false,oneside,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc]{scrbook} % one-sided
+
+\input{settings/packages}
+\input{settings/settings}
+\input{settings/commands}
+
+%\bibliography{bibliography/literature}
+\bibliography{bibliography/library}
+
+\input{glossary/terms}
+\input{glossary/acronyms}
+
+% #################
+% ### SETTINGS  ###
+% #################
+
+\begin{document}
+	
+\input{pages/cover}
+
+\frontmatter{}
+
+\input{pages/title}
+\input{pages/disclaimer}
+
+\bigLineSpacing{ON}
+\input{pages/abstract}
+%\bigLineSpacing{OFF}
+
+\microtypesetup{protrusion=false}
+\tableofcontents{}
+\microtypesetup{protrusion=true}
+
+%\bigLineSpacing{ON}
+
+\mainmatter{}
+	
+% #################
+% ### CHAPTERS  ###
+% #################
+
+\input{chapters/01_samplechapter}
+
+% #################
+% ### APPENDIX  ###
+% #################
+
+\input{pages/acknowledgements}
+
+\part*{Appendix}
+
+\pagenumbering{Roman} % römische Ziffern für die Anhänge
+
+\begin{appendix}
+	\input{chapters/A1_sampleappendix}		
+\end{appendix}
+
+% Reset paragraph whitespace
+\bigLineSpacing{OFF}
+
+ \glsaddall{} % add all defined terms to glossary, even if not referenced in text
+ \printglossaries{}
+ 
+ \microtypesetup{protrusion=false}
+ \listoffigures{}
+ %\listoftables{}
+ \microtypesetup{protrusion=true}
+ \printbibliography{}
+
+\end{document}

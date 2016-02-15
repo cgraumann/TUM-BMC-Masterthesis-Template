@@ -1,0 +1,90 @@
+% Basic information for cover & title page
+\newcommand*{\getUniversity}{Technische Universität München}
+\newcommand*{\getFaculty}{Department of Informatics}
+\newcommand*{\getTitle}{YOUR THESIS TITLE in ENGLISH}
+\newcommand*{\getTitleGer}{YOUR THESIS TITLE in GERMAN}
+\newcommand*{\getAuthor}{YOUR NAME}
+\newcommand*{\getDoctype}{Master's Thesis in Biomedical Computing}
+\newcommand*{\getSupervisor}{Prof.~Dr.~Nassir~Navab}
+\newcommand*{\getAdvisor}{YOUR ADVISOR}
+\newcommand*{\getSubmissionDate}{\today}
+\newcommand*{\getSubmissionLocation}{München}
+	
+% #################
+% ### SHORTCUTS ###
+% #################
+
+\newcommand{\TUM}{Technische Universit\"at M\"unchen}
+
+\newcommand{\bigLineSpacing}[1]{
+	\ifthenelse{\equal{#1}{ON}}{
+		% Flexible whitespace between paragraphs
+		\setlength{\parskip}{3mm plus4mm minus2mm}
+		\linespread{1.1}
+	}{
+		% Whitespace OFF
+		\setlength{\parskip}{0mm}
+		\linespread{1.0}
+	}
+}
+
+% Todos in text
+\newcommand{\todo}[1]{
+	{\color{red} TODO: #1} \normalfont
+}
+\newcommand{\info}[1]{
+	{\colorbox{blue}{\color{white}(INFO: #1)}}
+}
+\newcommand{\delete}[1]{
+	{\color{blue} DELETE?: #1} \normalfont
+}
+
+% Easy acronym
+\newcommand{\acr}[2] {
+	\newacronym{#1}{#1}{#2}
+}
+
+% Fixed-width image
+\newcommand{\img}[4]{
+	\begin{figure}[!hbt]
+		\centering
+		\vspace{1ex}
+		\includegraphics[width=#2]{figures/#1}
+		\caption[#4]{#3}
+		\label{fig:#1}
+		\vspace{1ex}
+	\end{figure}
+}
+% Image with file width
+\newcommand{\imgfile}[3]{
+	\begin{figure}[!hbt]
+		\centering
+		\vspace{1ex}
+		\includegraphics{figures/#1}
+		\caption[#3]{#2}
+		\label{fig:#1}
+		\vspace{1ex}
+	\end{figure}
+}
+% Bild todo
+\newcommand{\todoimg}[2]{
+	\begin{figure}[!hbt]
+		\centering
+		\vspace{2ex}
+		\includegraphics[width=6cm]{settings/todo}
+		\caption{\todo{#2}}
+		\label{fig:#1}
+		\vspace{2ex}
+	\end{figure}
+}
+% Image on the right side
+\newcommand{\imgright}[4]
+{
+	\begin{floatingfigure}[r]{#2}
+		%\centering
+		\includegraphics[width=#2]{figures/#1}
+		\captionsetup{width=#2}
+		\caption[#4]{#3}		
+		\label{fig:#1}
+	\end{floatingfigure}
+}
